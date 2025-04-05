@@ -130,6 +130,12 @@ function CarList() {
                 <AgGridReact<TcarData>
                     columnDefs={columnDefs}
                     rowData={cars}
+                    animateRows={true}
+
+                    getRowId={(params) => params.data._links.self.href}
+
+
+
                 />
             </div>
         </>
